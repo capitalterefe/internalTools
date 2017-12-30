@@ -1,0 +1,34 @@
+First Steps in getting a project from gitHub
+1.Copy the uri of the repo
+2.mkdir myNewProject
+3.cd myNewProject
+4.clone https://github.com/capitalterefe/internalTools.git
+5.cd internalTools
+6.git status 
+
+Second Creating a local branch and working on localBranch 
+1.git branch workingBranch
+2.git checkout workingBranch
+3.Go head and make your changes on the workingBranch
+4.git add <yourFileName> or . 
+5.git commit -m 'commit message'
+6.git log 
+
+Thirdly Creating a pull request 
+1.git push -u origin workingBranch
+2.enter gitHub userName/password if prompted
+
+The Project Owner Can accept your pull request and merge your changes to the master
+in that case go to step four, if you are the owner you can follow on step five 
+
+Step Four:: Git Push And Git Pull
+After pull request accepted and changes merged to master by the owner
+ you need to update your local Copy
+1. git checkout master
+2. git pull
+
+Step Five: Git Merge as a project admin
+if you are the project admin you can merge local changes to the master and push to remote
+1.git checkout master
+2.git merge workingBranch
+3.git push origin master
