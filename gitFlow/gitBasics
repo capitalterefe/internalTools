@@ -18,6 +18,7 @@ Thirdly Creating a pull request
 1.git push -u origin workingBranch
 2.enter gitHub userName/password if prompted
 
+
 The Project Owner Can accept your pull request and merge your changes to the master
 in that case go to step four, if you are the owner you can follow on step five 
 
