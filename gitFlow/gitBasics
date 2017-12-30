@@ -33,7 +33,7 @@ if you are the project admin you can merge local changes to the master and push 
 1.git checkout master
 2.git merge workingBranch
 3.git push origin master
-
+4.you can delete the workingBranch using -> git branch -d workingBranch
 
 ADDING EXISTING PROJECT TO GITHUB
 1.create new repo on gitHub- do not initialize with ReadMe or gitIgnore
