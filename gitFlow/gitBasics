@@ -33,3 +33,17 @@ if you are the project admin you can merge local changes to the master and push 
 1.git checkout master
 2.git merge workingBranch
 3.git push origin master
+
+
+ADDING EXISTING PROJECT TO GITHUB
+1.create new repo on gitHub- do not initialize with ReadMe or gitIgnore
+2.mkdir newProjectRepo
+3.cd newProjectRepo
+4.move your projectFiles inside newProjectRepo
+5.git init
+6.git add .   --use git reset HEAD yourFile to unstage a file
+7.git commit -m "first commit'
+8.git remote add origin <remote repo url>
+9.git remote -v
+10.git push -u origin master
+5.git 
