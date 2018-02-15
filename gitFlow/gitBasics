@@ -28,12 +28,15 @@ After pull request accepted and changes merged to master by the owner
 1. git checkout master
 2. git pull
 
+
+
 Step Five: Git Merge as a project admin
 if you are the project admin you can merge local changes to the master and push to remote
 1.git checkout master
 2.git merge workingBranch
 3.git push origin master
 4.you can delete the workingBranch using -> git branch -d workingBranch
+
 
 ADDING EXISTING PROJECT TO GITHUB
 1.create new repo on gitHub- do not initialize with ReadMe or gitIgnore
