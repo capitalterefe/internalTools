@@ -53,4 +53,4 @@ Remove Files from Git After Adding/Updating .Gitignore
 git rm -r --cached .
 git add -A
 git commit -am 'Removing ignored files'
-finally
+
