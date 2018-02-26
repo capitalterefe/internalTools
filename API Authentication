@@ -1,0 +1,12 @@
+API_METHOD="GET"
+API_PATH="/v2/owners"
+API_URL="https://sandbox.threatconnect.com/api"${API_PATH}
+API_SECRET="HpFl^g92h9HI4oyFSc69Ryi%J6ZJs4GGrfh4L%El9DYo88ZTt21?cPfSoXwSr$WI"
+API_ID="18204563421395348250"
+
+TIMESTAMP=`date +%s`
+signature="${API_PATH}:${API_METHOD}:${TIMESTAMP}"
+hmac_signature=$(echo -n ${signature} | openssl dgst -binary -sha256 -hmac ${API_SECRET} | base64)
+authorization="TC ${API_ID}:${hmac_signature}"
+
+curl -s -i -H "Timestamp: ${TIMESTAMP}" -H "Authorization: ${authorization}" -X ${API_METHOD} "${API_URL}"
