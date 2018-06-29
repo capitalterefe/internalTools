@@ -1,0 +1,9 @@
+jenkins_master:
+  image: capitalt/jenkins_custom
+  volumes:
+   - ./jenkins_home:/var/jenkins_home
+  container_name: jenkins_custom_containery
+  ports:
+   - "50000:50000"
+   - "8080:8080"
+
