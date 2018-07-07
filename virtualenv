@@ -1,0 +1,8 @@
+#download python from https://www.python.org/
+vi .bash_profile
+  PATH="/Library/Frameworks/Python.framework/Versions/{version}/bin:${PATH}"
+  export PATH
+
+pip install virtualenv
+sudo virtualenv -p python3 <targetFolder>
+souce <targetFolder>/bin/activate
