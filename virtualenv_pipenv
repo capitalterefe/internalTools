@@ -1,0 +1,23 @@
+#download python from https://www.python.org/
+vi .bash_profile
+  PATH="/Library/Frameworks/Python.framework/Versions/{version}/bin:${PATH}"
+  export PATH
+
+pip install virtualenv
+sudo virtualenv -p python3 <targetFolder>
+souce <targetFolder>/bin/activate
+
+#Pipenv automatically creates and manages a virtualenv for your projects
+sudo pip install pipenv
+#change the permission to 777 /Users/ct/.local/share/virtualenvs to avoid typing sudo
+chmod 777 virtualenvs
+#create your project directory
+mkdir tmp
+cd tmp
+#install any  python version- provided it's installed in your machine
+pipenv install --python 3.6
+#activate the virtual environment and switch to the virtual environment
+pipenv shell
+#install packages
+pipenv install pytest
+
