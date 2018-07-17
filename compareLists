@@ -1,0 +1,97 @@
+package delete;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class Runner {
+	public static void main(String[] args) {
+
+		ArrayList<Employee> ar = new ArrayList<Employee>();
+		ar.add(new Employee(111, "zebeba", "kore"));
+		ar.add(new Employee(131, "bekele", "gore"));
+		ar.add(new Employee(121, "dani", "mare"));
+		ar.add(new Employee(121, "anil", "mi"));
+		ar.add(new Employee(121, "jani", "ye"));
+		ar.add(new Employee(121, "kani", "wk"));
+
+		
+		ArrayList<Employee> sortedList = new ArrayList<Employee>();
+		sortedList.add(new Employee(111, "zebeba", "kore"));
+		sortedList.add(new Employee(131, "bekele", "gore"));
+		sortedList.add(new Employee(121, "dani", "mare"));
+		sortedList.add(new Employee(121, "anil", "mi"));
+		sortedList.add(new Employee(121, "jani", "ye"));
+		sortedList.add(new Employee(121, "kani", "wk"));
+		
+		System.out.println(ar.equals(sortedList));
+		
+		System.out.println("Unsorted");
+		for (int i = 0; i < ar.size(); i++)
+			System.out.println(ar.get(i));
+
+		Collections.sort(ar, new SortByName());
+
+		System.out.println("\nSorted by name");
+		for (int i = 0; i < ar.size(); i++)
+			System.out.println(ar.get(i));
+		
+		
+		//Assert if both lists are equal
+		System.out.println(ar.equals(sortedList));
+		
+
+	}
+}
+
+class Employee {
+	private int id;
+	private String name;
+	private String address;
+
+	public Employee(int id, String name, String address) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String toString() {
+		return this.id + " " + this.name + " " + this.address;
+	}
+
+	
+
+}
+
+class SortByName implements Comparator<Employee> {
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		return e1.getName().compareTo(e2.getName());
+	}
+
+}
