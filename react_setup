@@ -1,0 +1,30 @@
+#1- get the react development env
+npm i -g create-react-app@1.5.2
+#2- create the react up under a new directory
+create-react-app simple-app
+#3  start the new app
+cd simple-app
+npm start
+#4 head on to your browser on port 3000
+ http://localhost:3000/
+ 
+#install "simple React Snippets" in vsCode for short completion
+
+
+#------public
+public facing assets
+#------src
+react components and css files
+
+#----install bootstrap
+ctrl ` --> to bring the integrated terminal
+npm i bootstrap@4.1.1 --> install bootstrap
+import 'bootstrap/dist/css/bootstrap.css'; -->to add import statement to your index.js file
+imrc --> to import react component
+cc ---> create class
+cmd + d ---> use for multi word editing
+
+#-----Plain Javascript concept
+true && "hi"
+will return 'hi' since truthy and truthy will return the last element
+true 
