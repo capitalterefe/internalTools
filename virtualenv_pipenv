@@ -23,3 +23,6 @@ pipenv install pytest
 #you can exit and comeback to the virtual environment
 pipenv shell #will activate your virtual env based on the Pipefile in your current directory
 
+#The pythonpath tells python were to look for modules, inorder to use locally created libraries we need to export the pythonpath
+export PYTHONPATH=$PYTHONPATH:/<path_to_modules>
+
