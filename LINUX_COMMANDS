@@ -1,0 +1,2 @@
+#to see open ports 
+netstat -lntu
