@@ -1,2 +1,6 @@
 #to see open ports 
 netstat -lntu
+#to enable firewall on specific ports
+sudo firewall-cmd --permanent --zone=public --add-port=7070/tcp
+sudo firewall-cmd --reload
+
