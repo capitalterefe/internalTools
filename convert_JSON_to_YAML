@@ -1,0 +1,4 @@
+$ mkdir templates
+$ cd templates
+$ curl -o single_instance.json "https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/EC2InstanceWithSecurityGroupSample.template"
+$ ruby -ryaml -rjson -e 'puts YAML.dump(JSON.load(ARGF))' < single_instance.json > single_instance.yml
