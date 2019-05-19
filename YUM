@@ -1,0 +1,8 @@
+in sum instances epel repo might be disabled and be annoying getting an error like 
+No package python-pip available.
+Error: Nothing to do
+Since such type error is because the package wasn't found in the default repo and it might be fair to try to disable or repos
+and enable `epel` and install
+
+eg.
+sudo yum --disablerepo="*" --enablerepo="epel" install python-pip
